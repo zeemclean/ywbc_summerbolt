@@ -1,0 +1,387 @@
+/*
+Theme Name: Storefront Paper
+Theme URI: http://storefrontthemes.com/themes/paper
+Author: Matt Jones of Storefront Themes
+Author URI: http://storefrontthemes.com
+Description: Full theme demo can be <a href="http://storefrontthemes.com/demo/paper/">found here</a>. A minimal design with just enough features. Includes built-in support for WP e-Commerce, Meta Slider and Fancybox plugins. Built with _s theme by Automattic by Storefront Themes. Video tutorial and support are available at <a href="http://storefrontthemes.com/themes/paper/">Storefront Themes</a>.
+Version: 1.1.1
+License: GNU General Public License
+License URI: license.txt
+Tags: one-column,two-columns,left-sidebar,right-sidebar,full-width-template,fixed-layout,translation-ready,threaded-comments,custom-menu,white,post-formats,featured-images,sticky-post
+
+This theme, like WordPress, is licensed under the GPL.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+/* =Reset
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+border: 0;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;margin: 0;outline: 0;padding: 0;vertical-align: baseline;}
+html {font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012 controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */}
+body {background: #fff;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {display: block;}
+ol, ul {list-style: none;}
+table { /* tables still need 'cellspacing="0"' in the markup */border-collapse: separate;border-spacing: 0;}
+caption, th, td {font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+a:focus {outline: thin dotted;}
+a:hover,a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */outline: 0;}
+a img {border: 0;}
+
+/* =Global
+----------------------------------------------- */
+body,button,input,select,textarea {color: #404040;font-family: sans-serif;font-size: 16px;font-size: 1.6rem;line-height: 1.5;}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {clear: both;}
+hr {background-color: #ccc;border: 0; 	height: 1px; 	margin-bottom: 1.5em;}
+
+/* Text elements */
+p {margin-bottom: 1.5em;}
+ul, ol {margin: 0 0 1.5em 3em;}
+ul { list-style: disc;}
+ol { list-style: decimal;}
+ul ul, ol ol, ul ol, ol ul {margin-bottom: 0; 	margin-left: 1.5em;}
+dt {font-weight: bold;}
+dd {margin: 0 1.5em 1.5em;}
+b, strong {font-weight: bold;}
+dfn, cite, em, i {font-style: italic;}
+blockquote {margin: 0 1.5em;}
+address {margin: 0 0 1.5em;}
+pre {background: #eee;font-family: "Courier 10 Pitch", Courier, monospace;font-size: 15px;font-size: 1.5rem;line-height: 1.6;margin-bottom: 1.6em;padding: 1.6em;overflow: auto;max-width: 100%;}
+code, kbd, tt, var {font: 12px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;background: #EEE;
+padding: 3px;}
+abbr, acronym {border-bottom: 1px dotted #666;cursor: help;}
+mark, ins {background: #fff9c0;text-decoration: none;}
+sup,sub {font-size: 75%;height: 0;line-height: 0;position: relative;vertical-align: baseline;}
+sup {bottom: 1ex;}
+sub {top: .5ex;}
+small {font-size: 75%;}
+big {font-size: 125%;}
+figure {margin: 0;}
+table {margin: 0 0 1.5em;width: 100%;}
+th {font-weight: bold;}
+
+table, th, td {border: 1px solid rgba(0, 0, 0, 0.1); }
+table {border-collapse: separate;border-spacing: 0;border-width: 1px 0 0 1px;margin-bottom: 24px;width: 100%; } 
+caption, th, td { 	font-weight: normal;text-align: left;vertical-align: middle; }
+th {border-width: 0 1px 1px 0;font-weight: bold;padding:5px;}
+td {border-width: 0 1px 1px 0;padding:5px;}
+del {color: #767676; }
+hr {background-color: rgba(0, 0, 0, 0.1);border: 0;height: 1px;margin-bottom: 23px; }
+
+button,input,select,textarea {font-size: 100%; /* Corrects font size not being inherited in all browsers */margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */vertical-align: baseline; /* Improves appearance and consistency in all browsers */*vertical-align: middle; /* Improves appearance and consistency in all browsers */}
+button,input {line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */}
+button,html input[type="button"],input[type="reset"],input[type="submit"] {border: 1px solid #ccc;border-color: #ccc #ccc #bbb #ccc;border-radius: 3px;background: #e6e6e6;-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);color: rgba(0,0,0,.8);cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */font-size: 12px;font-size: 14px;line-height: 1;padding: 8px 12px;text-shadow: 0 1px 0 rgba(255,255,255,.8);}
+button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover {border-color: #ccc #bbb #aaa #bbb;-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);}
+button:focus, html input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:active, html input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active {border-color: #aaa #bbb #bbb #bbb;-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);}
+input[type="checkbox"],input[type="radio"] {box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */padding: 0; /* Addresses excess padding in IE8/9 */}
+input[type="search"] {-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */-moz-box-sizing: content-box;-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */box-sizing: content-box;}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */-webkit-appearance: none;}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */border: 0;padding: 0;}
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {color: #666;border: 1px solid #dcdcdc;border-radius: 3px;}
+input[type=text]:focus,input[type=email]:focus,input[type=password]:focus;textarea:focus {color: #111;}
+input[type=text],input[type=email],input[type=password] {padding: 7px;}
+textarea {overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */padding-left: 3px;vertical-align: top; /* Improves readability and alignment in all browsers */width: 98%;}
+
+/* Alignment */
+.alignleft {display: inline;float: left;margin-right: 1.5em;margin-bottom:20px;}
+.alignright {display: inline;float: right;margin-left: 1.5em;margin-bottom:20px;}
+.aligncenter {clear: both;display: block;margin: 0 auto;margin-bottom:20px;}
+
+/* Text meant only for screen readers */
+.assistive-text {clip: rect(1px 1px 1px 1px); /* IE6, IE7 */clip: rect(1px, 1px, 1px, 1px);position: absolute !important;}
+
+/* =Menu
+----------------------------------------------- */
+.main-navigation {clear: both;display: block;float: left;width: 100%;}
+.main-navigation ul {list-style: none;margin: 0;padding-left: 0;}
+.main-navigation li {float: left;position: relative;}
+.main-navigation a {display: block;text-decoration: none;}
+.main-navigation ul ul {-moz-box-shadow: 0 0px 3px #aaa;-webkit-box-shadow: 0 0px 3px #aaa;box-shadow: 0 0px 3px #aaa;display: none;float: left;position: absolute;top: 1.5em;left: 0;z-index: 99999;}
+.main-navigation ul ul ul {left: 100%;top: 0;}
+.main-navigation ul ul a {width: 150px;}
+.main-navigation ul ul li {}
+.main-navigation li:hover > a {}
+.main-navigation ul ul :hover > a {}
+.main-navigation ul ul a:hover {}
+.main-navigation ul li:hover > ul {display: block;}
+.main-navigation li.current_page_item a,.main-navigation li.current-menu-item a {}
+
+/* Small menu */
+.menu-toggle {cursor: pointer;}
+.main-small-navigation .menu {display: none;}
+
+/* =Content
+----------------------------------------------- */
+.sticky {}
+.hentry {margin: 0 0 40px;border-bottom: 1px dotted #dcdcdc;padding-bottom: 30px;}
+.entry-meta {clear: both;}
+.byline {display: none;}
+.single .byline,.group-blog .byline {display: inline;}
+.entry-content,.entry-summary {margin: 1.5em 0 0;}
+.page-links {clear: both;margin: 0 0 1.5em;}
+
+/* =Asides
+----------------------------------------------- */
+.blog .format-aside .entry-title,.archive .format-aside .entry-title {display: none;}
+
+/* =Media
+----------------------------------------------- */
+.site-header img,.entry-content img,.comment-content img,.widget img {max-width: 100%; /* Fluid images for posts, comments, and widgets */}
+.site-header img,.entry-content img,img[class*="align"],img[class*="wp-image-"] {height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */width:auto;}
+.site-header img,.entry-content img,img.size-full {max-width: 100%; /* Prevent stretching of full-size images with height and width attributes in IE8 */}
+.entry-content img.wp-smiley,.comment-content img.wp-smiley {border: none;margin-bottom: 0;margin-top: 0;padding: 0;}
+.wp-caption {border: 1px solid #dcdcdc;max-width: 100%;border-radius: 3px;}
+.wp-caption.aligncenter,.wp-caption.alignleft,.wp-caption.alignright {margin-bottom: 1.5em;}
+.wp-caption img {display: block;margin: 1.2% auto 0;max-width: 98%;}
+.wp-caption-text {text-align: center;}
+.wp-caption .wp-caption-text {margin: 0.8075em 0;}
+.site-content .gallery {margin-bottom: 1.5em;}
+.gallery-caption {}
+.site-content .gallery a img {border: none;height: auto;max-width: 90%;}
+.site-content .gallery dd {margin: 0;}
+.site-content .gallery-columns-4 .gallery-item {}
+.site-content .gallery-columns-4 .gallery-item img {}
+
+/* Make sure embeds and iframes fit their containers */
+embed,iframe,object {max-width: 100%!important;}
+
+/* =Navigation
+----------------------------------------------- */
+.site-content .site-navigation {margin: 0 0 1.5em;overflow: hidden;}
+.site-content .nav-previous {float: left;width: 50%;}
+.site-content .nav-next {float: right;text-align: right;width: 50%;}
+
+/* =Comments
+----------------------------------------------- */
+.bypostauthor {}
+
+/* =Widgets
+----------------------------------------------- */
+.widget {margin: 0 0 1.5em;}
+
+/* Search widget */
+#searchsubmit {display: none;}
+
+
+
+
+/*
+===============================================
+END OF THE UNDERSCORES DEFAULTS. NOW WE ADD
+OUR OWN STYLING
+===============================================
+*/
+
+body, button, input, select, textarea {font-family: 'Titillium Web','Helvetica Neue',helvetica,arial,sans-serif;font-weight:300;font-size:13px;line-height:25px;color: #272727;background:#fff;}
+
+/* Structure */
+#page {padding:20px;width:1000px;margin:0 auto;max-width:100%;}
+#masthead,#colophon {margin:20px auto;max-width:100%;}
+#main {margin:20px auto;max-width:100%;clear:both;}
+#primary {width:71%;float:left;}
+#secondary {width:24%;margin-left:5%;float:left;}
+#colophon {clear:both;}
+
+/* Headings */
+h1,h2,h3 {text-transform:uppercase;}
+h1 {font-size:30px;line-height:36px;font-weight:800;margin-bottom:20px;}
+h2 {font-size:24px;line-height:30px;font-weight:700;margin-bottom:16px;}
+h3 {font-size:20px;line-height:24px;font-weight:700;margin-bottom:12px;}
+h4 {font-size:16px;line-height:20px;margin-bottom:10px;}
+h5 {font-size:14px;line-height:16px;margin-bottom:8px;}
+h6 {font-size:12px;line-height:14px;}
+
+/* Links */
+a {text-decoration:none;color:#a04a00;}
+a:hover {text-decoration:underline;}
+
+/* Heading */
+.site-title {font-weight: 600;font-size: 44px;text-shadow: 1px 1px 1px #999;text-transform:none;}
+.site-title a {color:#272727;}
+.site-title a:hover {text-decoration:none;color:#a04a00;}
+#masthead hgroup,nav.main-navigation {display:inline;width:auto;clear:none;}
+#masthead hgroup {float:left;}
+h2.site-description {display:none;}
+#masthead {padding-bottom: 35px;margin:20px auto 40px;}
+#logo-link-container {position: relative;top: -16px;}
+
+/* Navigation */
+nav.main-navigation {float:right;margin-right: -10px;}
+.main-navigation a {color:#272727;font-size: 14px;font-weight: 300;text-transform: uppercase;}
+.main-navigation a:hover {color:#a04a00;text-decoration:none;}
+.main-navigation li a {padding:10px;line-height: 18px;}
+.main-navigation ul ul.sub-menu,.main-navigation ul ul.children {background:#fff;top:38px;}
+.main-navigation ul ul.sub-menu a {font-size:14px;font-weight:300;text-transform:none;color:#999;}
+.main-navigation .sub-menu a:hover,.main-navigation ul.children a:hover {background:#a04a00;color:#fff;}
+.main-navigation ul ul.sub-menu ul,.main-navigation ul ul.children ul {top:0;}
+.menu-toggle {background: black;width: auto;height: auto;text-align: center;color: white;vertical-align: bottom;display: table-cell;float: right;padding: 8px 18px 12px;top:0px;position: absolute;right: 4%;}
+.admin-bar .menu-toggle {top:28px;}
+
+/* Content */
+#main {border-top: 1px dotted #dcdcdc;padding-top: 40px;}
+.edit-link, .post-edit-link {clear:both;}
+.page .hentry {border-bottom: 0px dotted #dcdcdc;padding-bottom:0px;}
+h1.page-title {margin-bottom:40px;overflow-wrap: break-word;}
+.entry-title {overflow-wrap: break-word;}
+
+/* Sidebar */
+.widget {margin-bottom:40px;}
+.widget #s {width: 91%;padding: 2.5%;}
+.widget ul {margin:10px 0;}
+.widget li {list-style:none;padding:5px 10px;border-bottom:1px dotted #dcdcdc;}
+
+/* Footer */
+#colophon {border-top: 1px dotted #dcdcdc;padding: 20px 0;}
+
+/* Blog */
+#nav-below {padding-bottom: 55px;}
+.nav-previous a,.nav-next a,.next-image a,.previous-image a,a.more-link {padding: 4px 8px;background: #EEE;border: 1px solid #dcdcdc;border-radius: 3px;clear: both;margin-bottom: 0px;display: inline-block;}
+#content header .entry-meta {clear: both;margin-top: 10px;}
+#content footer.entry-meta {margin-top: 30px;margin-bottom:10px;background:#f9f9f9;padding: 7px 14px;border-radius: 2px;}
+blockquote {margin: 0 40px 20px;border-left: 4px solid #dcdcdc;padding: 0px 20px 0px;}
+
+/* Comments */
+ol.commentlist {list-style:none;margin:0;}
+li.comment article.comment {padding:20px;border-radius:3px;margin-bottom:20px;}
+li.comment.even article.comment{background:#f9f9f9;}
+li.comment.odd article.comment {background:#eee;}
+li.comment ul li.comment.even article.comment{background:#f9f9f9;}
+li.comment ul li.comment.odd article.comment {background:#eee;}
+li.comment ul li.comment ul li.comment.even article.comment{background:#f9f9f9;}
+li.comment ul li.comment ul li.comment.odd article.comment {background:#eee;}
+li.comment ul li.comment ul li.comment ul li.comment.even article.comment{background:#f9f9f9;}
+li.comment ul li.comment ul li.comment ul li.comment.odd article.comment {background:#eee;}
+li.comment ul {margin-left:40px;list-style:none;}
+li.comment .avatar {float:right;}
+li.comment .comment-author.vcard {font-weight:700;line-height:20px;}
+li.comment .comment-author.vcard .fn {text-transform:uppercase;font-size:14px;}
+li.comment cite {font-style:normal;}
+li.comment .comment-meta {margin-bottom:20px;}
+
+/* Page Templates */
+#primary.full-width {width:100%;}
+#left-sidebar-wrap #primary {width:71%;float:right;}
+#left-sidebar-wrap #secondary {width:24%;margin-right:5%;margin-left:0;float:left;}
+
+/* Issues */
+.site-content .site-navigation {overflow: visible;}
+.error404 .widget.widget_archive {margin-top: 40px;}
+
+/* Responsive */
+@media (max-width:1039px) {
+	#page {max-width:92%;padding:4%;}
+}
+
+@media (max-width:768px) {
+	#primary, #secondary,#left-sidebar-wrap #primary,#left-sidebar-wrap #secondary {margin:10px 0;float:none;width:100%;}
+	/* Responsive Menu */
+	.menu {list-style: none;margin: 0;text-align: right;background: black;width: auto;right: 4%;position: absolute;top: 50px;margin-left: 4%;width: 92%;}
+	.admin-bar .menu {top: 78px;}
+	.menu ul {margin:0;list-style:none;}
+	.menu a {padding: 10px 20px;display: block;color:#fff;}
+	.menu a:hover {text-decoration:none;background:#a04a00;color:#fff;}
+	#logo-link-container {top:25px;}
+	#logo-link-container img {padding-bottom:40px;}
+}
+
+#masthead * {
+-webkit-transition: all 0.35s ease-in-out;
+-moz-transition: all 0.35s ease-in-out;
+-o-transition: all 0.35s ease-in-out;
+-ms-transition: all 0.35s ease-in-out;
+transition: all 0.35s ease-in-out;
+}
+
+/* eCommerce */
+.wpsc_loading_animation {visibility: hidden;}
+.single_product_display .imagecol {width:37%;float:right;}
+.single_product_display .imagecol img {min-width: 100%;}
+.single_product_display .productcol {width:60%;float:left;margin-right:3%;}
+.single_product_display form {clear:both;}
+.single_product_display .wpsc-product-price {font-weight: bold;font-size: 140%;margin-top: 15px;}
+.default_product_display h2.prodtitle {font-weight:normal;font-size: 16px;font-weight: normal;text-align: center;text-transform:inherit;line-height: 1.3;}
+article.wpsc-product {border: 0;}
+.product-price-tag {display: block;position: relative;bottom: 60px;right: 0;float: right;background: rgba(0,0,0,0.8);color: #fff;padding: 5px 10px;margin-bottom: -60px;
+}
+
+.default_product_display .imagecol {display: block;margin: 0 auto;max-width: 100%;min-width:100%;}
+.default_product_display .imagecol img {min-width:100%;max-width:100%;}
+.default_product_display:hover .imagecol img,.storefront-wpec-product-add-images a:hover img,.single_product_display .imagecol a:hover img {box-shadow: 0px 0px 5px rgba(0,0,0,0.5);}
+a.wpsc_product_title:hover {text-decoration:none;}
+
+.storefront-wpec-product-add-images {margin-bottom: 15px;margin-right:-10px;}
+.single_product_display .imagecol .storefront-wpec-product-add-images img {min-width:inherit;width: 31%;margin: 0px 1.2% 0px 0px;}
+.storefront-wpec-product-add-images img:nth-child(3n+3) {margin-right:0;}
+.storefront-wpec-product-add-images img:nth-child(3n+4) {clear:both;}
+
+table.wpsc_checkout_table,table.wpsc_checkout_table td, table.wpsc_checkout_table th {border:0;padding-left:0;}
+table.checkout_cart td, table.checkout_cart th {text-align: center;}
+table.checkout_cart td img {vertical-align:middle;display:block;margin:0 auto;}
+table.wpsc_checkout_table_totals {width: auto;font-weight: bold;font-size: 125%;}
+.wpsc_email_address input {top: -23px;position: relative;margin-left: 5px;width:200px;}
+.wpsc_checkout_forms h4,label.wpsc_email_address {font-size: 125%;margin-bottom:10px;}
+.wpsc_checkout_forms select {height:20px;}
+.validation-error {color: #AA0505;}
+
+.wpsc_checkout_forms h4,label.wpsc_email_address,.wpsc-shopping-cart h3,h3.widget-title {font-size: 16px;line-height: 24px;font-weight: 300;margin-bottom: 12px;text-transform: uppercase;color: #aaa;}
+
+.user-profile-links a {padding: 7px;}
+.user-profile-links {margin-bottom: 10px;}
+
+#cart-icon {margin-right: 10px;}
+#cart-icon a.button {border: 1px solid #ccc;border-color: #ccc #ccc #bbb #ccc;border-radius: 3px;background: #e6e6e6;-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);color: rgba(0,0,0,.8);cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */font-size: 12px;font-size: 14px;line-height: 1;padding: 10px 15px;text-shadow: 0 1px 0 rgba(255,255,255,.8);margin-left: 10px;}
+#cart-icon a.button:hover {background: #dcdcdc;}
+
+/* ---- META SLIDER ---- */
+.metaslider {margin-bottom: 40px;}
+
+/* ---- PRODUCT RATING STYLING  ---- */
+.wpsc_product_rating .star {cursor:pointer;text-indent:-999em;display: block;width: 18px;width: 17px;float: left;}
+.wpsc_product_rating .star a {background-position:0 0;display:block;height:100%;background:transparent url(wpsc-images/grey-star.png) no-repeat scroll 0 0;outline: none;}
+.wpsc_product_rating .star a:hover {background-position:0 0;background:transparent url(wpsc-images/gold-star.png) no-repeat scroll 0 0;}
+.wpsc_product_rating .star a.selected {background-position:0 0;background:transparent url(wpsc-images/gold-star.png) no-repeat scroll 0 0;}
+.wpsc_product_rating .star a, .wpsc_product_rating .star a:focus {outline: none;}
+div.product_footer{position: relative;clear: both;padding: 0 !important;width: 80%;border-top: 1px dotted #ccc;height: 35px;margin-top: 1em;}
+div.product_footer strong{display: block;font-size: 90%;font-weight: normal;}
+div.product_average_vote{position: absolute;top: 10px;left: 0;width: 50%;float: left;margin: 0 !important;height: inherit;}
+div.product_user_vote{position: absolute;top: 10px;right: 0;width: 30%;margin: 0 !important;height: inherit;}
+span.vote_total{position: relative;top: -3px;left: 2px;font-size: 7pt;}
+span.rating_saved{color: #990000;display: none;} 
+
+/*-----FANCY NOTIFICATION STYLING-----*/
+#fancy_notification{position: absolute;top: 0;left: 0;background: #ffffff;border: 4px solid #cccccc;display: none;height: auto;z-index: 9;}
+#fancy_notification #loading_animation{display: none;}
+#fancy_notification #fancy_notification_content{display: none;width: 300px;padding: 8px;height: auto;text-align: left;margin: 0 !important;}
+#fancy_notification #fancy_notification_content span{margin: 0 0 6px 0;display: block;font-weight: normal;}
+#fancy_notification #fancy_notification_content a{display: block;float: left;margin-right: 6px;margin-bottom: 3px;}
+
+/*-----CART WIDGET-----*/
+.shopping-cart-wrapper .remove_button {background:url(wpsc-images/delete.png) no-repeat scroll 0 4px transparent;width:14px;text-indent:-9999px;border:none;outline:none;*line-height:1;cursor:pointer;	}
+.shopping-cart-wrapper .shoppingcart table tbody td.cart-widget-remove{padding:0px;}
+
+
+@media (max-width:600px) {
+	.single_product_display .imagecol,.single_product_display .productcol,#default_products_page_container .default_product_display {float:none;width:100%;margin:0;}
+	.main-small-navigation .menu {z-index: 1;}
+	.single_product_display form.product_form .wpsc_buy_button_container, #content .single_product_display form.product_form .wpsc_buy_button_container {text-align: left;}
+	.single_product_display .wpsc_product_price {padding:5px 0;}
+	#checkout_page_container td.firstcol.wpsc_product_image img {display: none;}
+}

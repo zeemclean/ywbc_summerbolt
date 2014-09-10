@@ -1,0 +1,50 @@
+*** Storefront Paper Changelog ***
+
+2014.04.04 - version 1.1.1
+	*Replaced 'image-resize' with 'wp_get_image_editor'
+	*Replace 'fixed-width' tag with 'fixed-layout'
+
+2014.04.04 - version 1.1
+	*Added WP e-Commerce support (custom styling for all elements plus cart nav and product image gallery)
+	*Added TGM Plugin activation class and recommended 3 plugins
+	*Added a "Reset Theme Mods" button to the theme customizer
+	*Added a support tab to the theme customizer
+	*Added new Google font "Titillium"
+	*Added "Blank" page template for homepages and drag and drop builders
+	*Removed or commented unused variables and functions in the Theme Customizer
+
+2013.11.22 - version 1.0.6
+	*removed extra 'Customize' menu item under "Appearance"
+	*Removed text area class in template-customizer.php
+	*replaced all 'paper' prefixes with 'sfpaper'
+	
+2013.11.22 - version 1.0.5
+	* prefixed functions found in template-customizer.php.
+	* functions.php - placed {{{require()}}} calls outside {{{sfpaper_setup()}}} function.
+	* header.php - escaped dynamic data output with {{{esc_attr()}}} for custom logo output here.
+	* Fixed footer section in customizer to have an input field :)
+	
+2013.11.20 - version 1.0.4
+	*Fixed long post title from overlapping.
+	
+2013.11.20 - version 1.0.3
+	*Removed WP Updates code from inc folder and functions.php
+	*Escaped home_url in search and header.php
+	*Prefixed functions in template-customizer.php
+	*Removed audio shortcode
+	
+2013.11.16 - version 1.0.2
+	*Fixed width for wide images that are resized (style.css:145)
+	*Changed footer link to StorefrontThemes.com instead of RocketFarmer.net
+	*Removed Google fonts from stylesheet
+	*Changed main font family to "Tahoma" (yeah, that's right...Tahoma!)
+	*Changed drop-down nav text color to medium gray
+	*Changed default link color to rust-orange
+
+2012.12.10 - version 1.0.1
+	*Adjusted styling where content meets footer (style.css)
+	*Added button styling for next and previous images (style.css)
+	*Changed Author URI to http://storefrontthemes.com (per WordPress.org requirements)
+
+2012.12.07 - version 1.0
+	*First release!

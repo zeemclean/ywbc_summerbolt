@@ -1,0 +1,64 @@
+/*
+ Theme Name:   Twenty Thirteen Child Test
+ Description:  Twenty Thirteen Child Test Theme
+ Author:       Zoe
+ Template:     twentythirteen
+ Version:      1.0.0
+ Text Domain:  twenty-thirteen-child
+*/
+
+
+@import url("../twentythirteen/style.css");
+
+
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Abel|Damion);
+
+h1{
+	font-family: Damion;
+}
+
+a{
+	font-family: Abel;
+
+}
+.entry-header, .entry-content, .entry-summary, .entry-meta {
+	width: 60%;
+	max-width: 960px;
+	margin-bottom:5px;
+}
+img.wp-post-image{
+	width:100%;
+}
+#main{
+	/*background-image: url(assets/nav-back.jpg);*/
+	background-color: #f7f5e7;
+}
+div.entry-content{
+	background-color: #f7f5e7;
+}
+.entry-title{
+	color: #91d9d1;
+}
+
+#colophon a{
+	color: #91d9d1;
+}
+
+div.imagecol{
+	width:100%;
+	padding: 5px;
+	background-image: url(assets/nav-back.jpg); 
+
+}
+.product_form{
+	clear:both;
+}
+a.thickbox img{
+	width: 150px;
+	height: 86px;
+}
+
