@@ -52,6 +52,7 @@ div.imagecol{
 	width:100%;
 	padding: 5px;
 	background-image: url(assets/nav-back.jpg); 
+	
 
 }
 .product_form{
@@ -60,5 +61,8 @@ div.imagecol{
 a.thickbox img{
 	width: 150px;
 	height: 86px;
+}
+#post-4{
+	background-image: url(assets/homeblock-sepia.jpg);
 }
 
